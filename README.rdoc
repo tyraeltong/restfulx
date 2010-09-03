@@ -2,6 +2,8 @@
 
 == Description
 
+This is Tyrael Tong's fork of the *RestfulX* to make it support Flex 4.
+
 Here's some of the things you can do with *RestfulX*:
 
 * *Create* a complete _Adobe_ _Flex_ or _AIR_ application in less than 5 minutes.
@@ -48,5 +50,3 @@ Get involved with the community:
 == License
 
 Copyright (c) 2008-2010 Dima Berastau and Contributors, released under MIT License
-
-Tyrael test

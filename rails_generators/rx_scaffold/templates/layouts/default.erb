@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<s:HGroup xmlns:fx="http://ns.adobe.com/mxml/2009"
+<mx:HBox xmlns:fx="http://ns.adobe.com/mxml/2009"
           xmlns:s="library://ns.adobe.com/flex/spark"
           xmlns:mx="library://ns.adobe.com/flex/mx"
           width="100%"
@@ -112,8 +112,8 @@
 <% end -%>
   ]]></fx:Script>
   <s:Panel id="<%= class_name.dcfirst.pluralize %>Panel"
-    title="<%= class_name.pluralize %>" cornerRadius="0" dropShadowEnabled="false" borderStyle="solid"
-    borderThickness="1" backgroundColor="#EEEEEE" width="25%" height="100%">
+    title="<%= class_name.pluralize %>" cornerRadius="0"
+    width="25%" height="100%">
     <s:List id="<%= class_name.dcfirst.pluralize %>List"
       width="100%" height="100%"
       dataProvider="{Rx.models.index(<%= class_name %>)}"
@@ -121,7 +121,7 @@
     <mx:ControlBar width="100%">
       <s:Button label="New <%= class_name %>" width="100%" height="30"
         click="new<%= class_name %>()"/>
-    </s:ControlBar>
+    </mx:ControlBar>
   </s:Panel>
   <s:Panel title="Edit <%= class_name %>" cornerRadius="0" dropShadowEnabled="false" borderStyle="solid"
     borderThickness="1" backgroundColor="#EEEEEE" width="75%" height="100%">
@@ -154,7 +154,7 @@
       <mx:FormItem label="<%= model.camelcase %>" width="100%">
         <s:ComboBox id="<%= model.camelcase(:lower) %>ComboBox" width="200"
           labelField="{<%= model.camelcase %>.LABEL}"
-          dataProvider="{Rx.models.index(<%= model.camelcase %>)}" prompt="<%= model.camelcase %> ..."
+          dataProvider="{Rx.models.index(<%= model.camelcase %>)}"
           selectedItem="{<%= class_name.dcfirst %>.<%= model.camelcase(:lower) %>}"/>
       </mx:FormItem>
 <% end -%>
@@ -167,4 +167,4 @@
         click="destroy<%= class_name %>()"/>
     </mx:ControlBar>
   </s:Panel>
-</s:HGroup>
+</mx:HBox>
